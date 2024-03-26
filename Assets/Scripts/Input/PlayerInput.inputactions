@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangePlant",
+                    "type": "Button",
+                    "id": "1ab868e2-f343-4543-a126-7587f50704b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -159,11 +168,22 @@
                 },
                 {
                     "name": "",
+                    "id": "106fc2c9-df2b-4463-ba00-fe6fcec51bd6",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangePlant",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "Gamepad",
                     "action": "Plant",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -174,7 +194,7 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Keyboard&Mouse",
                     "action": "Plant",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -185,7 +205,7 @@
                     "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Touch",
+                    "groups": "Touch",
                     "action": "Plant",
                     "isComposite": false,
                     "isPartOfComposite": false

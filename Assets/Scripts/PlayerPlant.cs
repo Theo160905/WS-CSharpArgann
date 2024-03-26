@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Tracing;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerPlant : MonoBehaviour
@@ -25,7 +24,7 @@ public class PlayerPlant : MonoBehaviour
     {
         if (OnPlot == true)
         {
-            Instantiate(Plants, Plot.transform);
+            Instantiate(Plants, Plot.transform.position, Quaternion.identity);
         }
     }
 
@@ -35,7 +34,6 @@ public class PlayerPlant : MonoBehaviour
         {
             OnPlot = true;
             Plot = collision.gameObject;
-            Debug.Log(Plot);
         };
     }
 
@@ -45,7 +43,6 @@ public class PlayerPlant : MonoBehaviour
         {
             OnPlot = false;
             Plot = Plot2;
-            Debug.Log(Plot);
         }
     }
 }

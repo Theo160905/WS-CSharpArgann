@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     InputAction _movement;
 
-    private float _speed = 10.0f;
+    private float _speed = 5.0f;
 
     private void Start()
     {

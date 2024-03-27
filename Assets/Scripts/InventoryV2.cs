@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Inventory : MonoBehaviour
+public class InventoryV2 : MonoBehaviour
 {
     public List<SO_Plants> plantsList;
     public List<int> inventorySlots;
@@ -11,18 +11,17 @@ public class Inventory : MonoBehaviour
 
     InputAction _ChangePlant;
 
-    private int _indexplantslist = 0 ;
+    private int _indexplantslist = 0;
 
 
     private void Start()
     {
-        _input = GetComponent<PlayerInput>();
-        _ChangePlant = _input.actions.FindAction("ChangePlant");
-        for (int i = 0; i < plantsList.Count; i++)
+        //_input = GetComponent<PlayerInput>();
+        //_ChangePlant = _input.actions.FindAction("ChangePlant");
+        for (int i = 0; i < plantsList.Count; i++ )
         {
             inventorySlots.Add(0);
         }
-        inventorySlots[0] = 3;
     }
 
     SO_Plants OnChangePlant()
@@ -30,7 +29,7 @@ public class Inventory : MonoBehaviour
         _indexplantslist++;
         if (_indexplantslist == plantsList.Count)
         {
-            _indexplantslist = 0 ;
+            _indexplantslist = 0;
         }
 
         return plantsList[_indexplantslist];
@@ -40,9 +39,5 @@ public class Inventory : MonoBehaviour
     {
         return plantsList[_indexplantslist];
     }
-
-    public int GetSeedNb()
-    {
-        return inventorySlots[_indexplantslist];
-    }
 }
+

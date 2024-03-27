@@ -1,23 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerPlant : MonoBehaviour
+public class PlayerRecup : MonoBehaviour
 {
-    public int MoneyPlayer = 0;
+    public int MoneyPlayer = 0 ;
 
     [SerializeField]
     private Inventory _inventory;
 
     PlayerInput _input;
 
-    InputAction _plant;
+    InputAction _recup;
 
     Plot _plot;
+
+    private GameObject _gameObject;
 
     private void Start()
     {
         _input = GetComponent<PlayerInput>();
-        _plant = _input.actions.FindAction("Plant");
+        _recup = _input.actions.FindAction("Recup");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,13 +38,8 @@ public class PlayerPlant : MonoBehaviour
         }
     }
 
-    void OnPlant()
+    void OnRecup()
     {
-        if (_plot != null && _plot.Plant == null && _inventory.GetSeedNb() != 0)
-        {
-            _plot.PlantSeed(_inventory.GetSelectedSeed());
-        }
-
         if (_plot != null && _plot.Plant != null)
         {
             MoneyPlayer += _plot.GatherPlant();

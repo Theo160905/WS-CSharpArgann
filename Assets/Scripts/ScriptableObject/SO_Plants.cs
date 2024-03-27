@@ -7,7 +7,9 @@ public class SO_Plants : ScriptableObject
     public int ID;
     public int MarketValue;
     public int SaleValue;
-    public float GrowthTime;
+    public int GrowthTime;
 
     public int Nb_Plants;
+
+    public GameObject Prefab;
 }

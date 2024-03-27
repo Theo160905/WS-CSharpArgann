@@ -16,4 +16,6 @@ MonoBehaviour:
   ID: 3
   MarketValue: 10
   SaleValue: 7
-  GrowthTime: 20
+  GrowthTime: 15000
+  Nb_Plants: 0
+  Prefab: {fileID: 3366273486989838695, guid: 6b58831c8dace8e4ab008fda51b52a61, type: 3}

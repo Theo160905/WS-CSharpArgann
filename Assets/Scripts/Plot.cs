@@ -2,23 +2,25 @@
 
 public class Plot : MonoBehaviour
 {
-    private bool _isempty = false;
+    public Plant Plant { get; private set; }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void PlantSeed(SO_Plants seedData)
     {
-        Debug.Log(collision.gameObject);
-        if (collision.gameObject.tag == "Plant")
-        {
-            _isempty = true;
-            Debug.Log("HELO");
-        }
+        if (Plant != null) return;
+
+        GameObject obj = Instantiate(seedData.Prefab, transform.position, Quaternion.identity);
+        Plant = obj.GetComponent<Plant>();
+        Plant.Initialize(seedData);
+        Plant.Growth();
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public int GatherPlant()
     {
-        if (collision.gameObject.tag == "Plant")
-        {
-            _isempty = false;
-        }
+        if (Plant == null || !Plant.IsGrown) return 0;
+
+        SO_Plants data = Plant.Data;
+        Destroy(Plant.gameObject);
+        Plant = null;
+        return data.MarketValue;
     }
 }

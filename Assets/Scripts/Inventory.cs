@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class Inventory : MonoBehaviour
+public class Inventory : PlayerMain
 {
     [Serializable]
     public class InventorySlot
@@ -20,18 +19,13 @@ public class Inventory : MonoBehaviour
 
     private int _selectedIndex;
 
-    PlayerInput _input;
-    InputAction _ChangePlant;
-
-    PlayerPlant _plant;
-
     private void Start()
     {
-        _input = GetComponent<PlayerInput>();
-        _ChangePlant = _input.actions.FindAction("ChangePlant");
-        _plant = GetComponent<PlayerPlant>();
+        //Récuper l'action quand la touche "c" est préssé
+        _inputaction = _input.actions.FindAction("ChangePlant");
     }
 
+    //Méthode pour pouvoir changer de Plantes 
     SO_Plants OnChangePlant()
     {
         _selectedIndex = (_selectedIndex + 1) % _inventory.Count;
@@ -39,16 +33,19 @@ public class Inventory : MonoBehaviour
         return GetSelectedSlot().Plant;
     }
 
+    //Méthode pour récupérer la Plante, qui est actuellement choisi, dans d'autres scripts 
     public SO_Plants GetSelectedSeed()
     {
         return GetSelectedSlot().Plant;
     }
 
+    //Méthode pour connaître l'index d'où se situe le joueur dans la liste
     public InventorySlot GetSelectedSlot()
     {
         return _inventory[_selectedIndex];
     }
 
+    //Méthode pour connaître le nombre de graines de la plantes choisi
     public int GetSeedAmount()
     {
         return GetSelectedSlot().Amount;

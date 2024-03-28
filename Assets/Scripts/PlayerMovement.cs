@@ -1,27 +1,25 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PlayerMain
 {
-    PlayerInput _input;
-
-    InputAction _movement;
-
     private float _speed = 5.0f;
 
     private void Start()
     {
-        _input = GetComponent<PlayerInput>();
-        _movement = _input.actions.FindAction("Move");
-    }
-    private void FixedUpdate()
-    {
-        OnMove();
+        //Récuper l'action quand les touches "zqsd" ou que les flèches directionnelles sont préssées
+        _inputaction = _input.actions.FindAction("Move");
     }
 
+    //Méthode pour que le joueur puisse bouger
     void OnMove()
     {
-        Vector2 direction = _movement.ReadValue<Vector2>();
+        Vector2 direction = _inputaction.ReadValue<Vector2>();
         transform.position += new Vector3(direction.x, direction.y, 0) * Time.deltaTime * _speed;
+    }
+
+    private void FixedUpdate()
+    {
+        //La méthode OnMove() est mis dans un FixedUpdate pour que les movements du joueurs soient fluides
+        OnMove();
     }
 }

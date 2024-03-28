@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: beebca5b52e9bd5418838673a7cf845a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: platformerBricks_tilesheet_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 772
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e64674c63951374e855b4c9c733c90a
+      internalID: -978092511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerBricks_tilesheet_48
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 525
+        width: 139
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d73d5558128a9b4f8301a56689a3d1b
+      internalID: 1056345799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerBricks_tilesheet_50
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 561
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ef367a02009844c9fa9034d784f70c
+      internalID: -1367247165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerBricks_tilesheet_161
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 40
+        width: 67
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfccb71bdbc42a945a1f423f8ecb87b7
+      internalID: -642760939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platformerBricks_tilesheet_0
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 755
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6940c0b19203564597b2ee509e58dba
+      internalID: 1201264842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      platformerBricks_tilesheet_0: 1201264842
+      platformerBricks_tilesheet_1: -298373777
+      platformerBricks_tilesheet_10: -625918515
+      platformerBricks_tilesheet_100: 2092936730
+      platformerBricks_tilesheet_101: 1187919798
+      platformerBricks_tilesheet_102: 1320272112
+      platformerBricks_tilesheet_103: 1884406883
+      platformerBricks_tilesheet_104: -1034715219
+      platformerBricks_tilesheet_105: 919632061
+      platformerBricks_tilesheet_106: 366497676
+      platformerBricks_tilesheet_107: -1260326288
+      platformerBricks_tilesheet_108: -1843929596
+      platformerBricks_tilesheet_109: 1544587038
+      platformerBricks_tilesheet_11: -634347579
+      platformerBricks_tilesheet_110: -1143291039
+      platformerBricks_tilesheet_111: -1877269762
+      platformerBricks_tilesheet_112: 55627464
+      platformerBricks_tilesheet_113: 1369725629
+      platformerBricks_tilesheet_114: 1490785337
+      platformerBricks_tilesheet_115: -2026434493
+      platformerBricks_tilesheet_116: -1221580960
+      platformerBricks_tilesheet_117: 918507188
+      platformerBricks_tilesheet_118: 279850962
+      platformerBricks_tilesheet_119: 321843506
+      platformerBricks_tilesheet_12: 1078189508
+      platformerBricks_tilesheet_120: -2032235733
+      platformerBricks_tilesheet_121: 804001005
+      platformerBricks_tilesheet_122: 812784467
+      platformerBricks_tilesheet_123: 2001859097
+      platformerBricks_tilesheet_124: 661296801
+      platformerBricks_tilesheet_125: -712493333
+      platformerBricks_tilesheet_126: -1661784360
+      platformerBricks_tilesheet_127: 1166535084
+      platformerBricks_tilesheet_128: -1515909755
+      platformerBricks_tilesheet_129: 784743115
+      platformerBricks_tilesheet_13: -1247261351
+      platformerBricks_tilesheet_130: 218175631
+      platformerBricks_tilesheet_131: 41006886
+      platformerBricks_tilesheet_132: 2015874853
+      platformerBricks_tilesheet_133: -1366294534
+      platformerBricks_tilesheet_134: -1826283963
+      platformerBricks_tilesheet_135: -396486700
+      platformerBricks_tilesheet_136: 664383802
+      platformerBricks_tilesheet_137: -508235956
+      platformerBricks_tilesheet_138: 276599280
+      platformerBricks_tilesheet_139: -109409105
+      platformerBricks_tilesheet_14: -1625815370
+      platformerBricks_tilesheet_140: 34668899
+      platformerBricks_tilesheet_141: 669053903
+      platformerBricks_tilesheet_142: -1104334457
+      platformerBricks_tilesheet_143: 372640336
+      platformerBricks_tilesheet_144: -271999571
+      platformerBricks_tilesheet_145: -1861426213
+      platformerBricks_tilesheet_146: 1714765666
+      platformerBricks_tilesheet_147: 1292694070
+      platformerBricks_tilesheet_148: -794072460
+      platformerBricks_tilesheet_149: -2054504366
+      platformerBricks_tilesheet_15: 1684990895
+      platformerBricks_tilesheet_150: -603371403
+      platformerBricks_tilesheet_151: -1845370361
+      platformerBricks_tilesheet_152: 731507397
+      platformerBricks_tilesheet_153: -663912737
+      platformerBricks_tilesheet_154: 687172443
+      platformerBricks_tilesheet_155: -999014394
+      platformerBricks_tilesheet_156: 1471317481
+      platformerBricks_tilesheet_157: 503598020
+      platformerBricks_tilesheet_158: 1119633339
+      platformerBricks_tilesheet_159: -856578279
+      platformerBricks_tilesheet_16: 1154932698
+      platformerBricks_tilesheet_160: -1988114183
+      platformerBricks_tilesheet_161: -642760939
+      platformerBricks_tilesheet_162: 302870583
+      platformerBricks_tilesheet_163: 430660061
+      platformerBricks_tilesheet_164: 368733918
+      platformerBricks_tilesheet_17: 457008135
+      platformerBricks_tilesheet_18: -1755225185
+      platformerBricks_tilesheet_19: 1463049513
+      platformerBricks_tilesheet_2: 1326525503
+      platformerBricks_tilesheet_20: 225893681
+      platformerBricks_tilesheet_21: 335809758
+      platformerBricks_tilesheet_22: -1816141505
+      platformerBricks_tilesheet_23: 1044730393
+      platformerBricks_tilesheet_24: 2054478004
+      platformerBricks_tilesheet_25: 262204011
+      platformerBricks_tilesheet_26: -1202998597
+      platformerBricks_tilesheet_27: -1088661530
+      platformerBricks_tilesheet_28: 801839115
+      platformerBricks_tilesheet_29: 26232956
+      platformerBricks_tilesheet_3: -1349166686
+      platformerBricks_tilesheet_30: 1467932729
+      platformerBricks_tilesheet_31: 1002174015
+      platformerBricks_tilesheet_32: 1102103602
+      platformerBricks_tilesheet_33: 107582243
+      platformerBricks_tilesheet_34: 1728067126
+      platformerBricks_tilesheet_35: -204403184
+      platformerBricks_tilesheet_36: 927605221
+      platformerBricks_tilesheet_37: -346880563
+      platformerBricks_tilesheet_38: 1297680510
+      platformerBricks_tilesheet_39: -860379900
+      platformerBricks_tilesheet_4: -701571118
+      platformerBricks_tilesheet_40: -681052205
+      platformerBricks_tilesheet_41: -672211305
+      platformerBricks_tilesheet_42: -531973262
+      platformerBricks_tilesheet_43: -247235748
+      platformerBricks_tilesheet_44: 1353102919
+      platformerBricks_tilesheet_45: -1854497754
+      platformerBricks_tilesheet_46: 230726239
+      platformerBricks_tilesheet_47: -1146141069
+      platformerBricks_tilesheet_48: 1056345799
+      platformerBricks_tilesheet_49: -1880268094
+      platformerBricks_tilesheet_5: 456333968
+      platformerBricks_tilesheet_50: -1367247165
+      platformerBricks_tilesheet_51: -574323174
+      platformerBricks_tilesheet_52: -1794954696
+      platformerBricks_tilesheet_53: -2107709471
+      platformerBricks_tilesheet_54: -47260544
+      platformerBricks_tilesheet_55: 845959234
+      platformerBricks_tilesheet_56: -372200307
+      platformerBricks_tilesheet_57: 1350055919
+      platformerBricks_tilesheet_58: 2093146020
+      platformerBricks_tilesheet_59: -1286523330
+      platformerBricks_tilesheet_6: -978092511
+      platformerBricks_tilesheet_60: 1129584556
+      platformerBricks_tilesheet_61: 951441888
+      platformerBricks_tilesheet_62: 354504762
+      platformerBricks_tilesheet_63: 1617078914
+      platformerBricks_tilesheet_64: -726523341
+      platformerBricks_tilesheet_65: 2019037755
+      platformerBricks_tilesheet_66: -801090525
+      platformerBricks_tilesheet_67: -709765442
+      platformerBricks_tilesheet_68: 1598874757
+      platformerBricks_tilesheet_69: 651224804
+      platformerBricks_tilesheet_7: 451993217
+      platformerBricks_tilesheet_70: 1059922986
+      platformerBricks_tilesheet_71: -148466464
+      platformerBricks_tilesheet_72: -1536986251
+      platformerBricks_tilesheet_73: 1454725697
+      platformerBricks_tilesheet_74: 746528951
+      platformerBricks_tilesheet_75: 353419310
+      platformerBricks_tilesheet_76: -1947869929
+      platformerBricks_tilesheet_77: -561518222
+      platformerBricks_tilesheet_78: -329541183
+      platformerBricks_tilesheet_79: -1726242882
+      platformerBricks_tilesheet_8: -646866514
+      platformerBricks_tilesheet_80: 1922115288
+      platformerBricks_tilesheet_81: -92169911
+      platformerBricks_tilesheet_82: 30949493
+      platformerBricks_tilesheet_83: 1625401670
+      platformerBricks_tilesheet_84: 325840378
+      platformerBricks_tilesheet_85: -1546927921
+      platformerBricks_tilesheet_86: 1539519661
+      platformerBricks_tilesheet_87: -1050495513
+      platformerBricks_tilesheet_88: -1842123532
+      platformerBricks_tilesheet_89: 1136422357
+      platformerBricks_tilesheet_9: -91490180
+      platformerBricks_tilesheet_90: 1878710382
+      platformerBricks_tilesheet_91: 1529702954
+      platformerBricks_tilesheet_92: 1060289580
+      platformerBricks_tilesheet_93: 1040760940
+      platformerBricks_tilesheet_94: -1125697828
+      platformerBricks_tilesheet_95: 1891077306
+      platformerBricks_tilesheet_96: 2045883190
+      platformerBricks_tilesheet_97: -71167531
+      platformerBricks_tilesheet_98: 1883714898
+      platformerBricks_tilesheet_99: -1104126213
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

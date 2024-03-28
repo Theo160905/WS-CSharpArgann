@@ -19,6 +19,5 @@ public class Plant : MonoBehaviour
         Debug.Log("FINI");
         IsGrown = true;
         //Grandir la plante
-        //Peut la récupérer
     }
 }

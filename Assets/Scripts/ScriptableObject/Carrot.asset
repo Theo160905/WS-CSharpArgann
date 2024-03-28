@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Carrot
   ID: 1
-  MarketValue: 5
-  SaleValue: 3
+  BuyValue: 3
+  SaleValue: 5
   GrowthTime: 5000
   Nb_Plants: 0
   Prefab: {fileID: 3366273486989838695, guid: c17d9c65a58553746a8b0367ffeaf708, type: 3}

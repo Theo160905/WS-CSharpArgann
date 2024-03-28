@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerRecup : MonoBehaviour
 {
-    public int MoneyPlayer = 0 ;
+    public int MoneyPlayer=0;
 
     [SerializeField]
     private Inventory _inventory;

@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerPlant : MonoBehaviour
 {
-    public int MoneyPlayer = 0;
+    private int _moneyplayer = 0;
+    PlayerMoney _playerMoney;
 
     [SerializeField]
     private Inventory _inventory;
@@ -18,6 +19,7 @@ public class PlayerPlant : MonoBehaviour
     {
         _input = GetComponent<PlayerInput>();
         _plant = _input.actions.FindAction("Plant");
+        _playerMoney = GetComponent<PlayerMoney>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,14 +40,17 @@ public class PlayerPlant : MonoBehaviour
 
     void OnPlant()
     {
-        if (_plot != null && _plot.Plant == null && _inventory.GetSeedNb() != 0)
+        if (_plot != null && _plot.Plant == null && _inventory.GetSeedAmount() > 0)
         {
+            _inventory.RemoveSeed();
             _plot.PlantSeed(_inventory.GetSelectedSeed());
         }
 
         if (_plot != null && _plot.Plant != null)
         {
-            MoneyPlayer += _plot.GatherPlant();
+            _moneyplayer += _plot.GatherPlant();
+            _playerMoney.AddMoney(_moneyplayer);
+            _moneyplayer = 0;
         }
     }
 }

@@ -21,6 +21,6 @@ public class Plot : MonoBehaviour
         SO_Plants data = Plant.Data;
         Destroy(Plant.gameObject);
         Plant = null;
-        return data.MarketValue;
+        return data.SaleValue;
     }
 }

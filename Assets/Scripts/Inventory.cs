@@ -1,48 +1,68 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    public List<SO_Plants> plantsList;
-    public List<int> inventorySlots;
+    [Serializable]
+    public class InventorySlot
+    {
+        [field: SerializeField]
+        public SO_Plants Plant { get; set; }
+
+        [field: SerializeField]
+        public int Amount { get; set; }
+    }
+
+    [SerializeField]
+    private List<InventorySlot> _inventory = new();
+
+    private int _selectedIndex;
 
     PlayerInput _input;
-
     InputAction _ChangePlant;
 
-    private int _indexplantslist = 0 ;
-
+    PlayerPlant _plant;
 
     private void Start()
     {
         _input = GetComponent<PlayerInput>();
         _ChangePlant = _input.actions.FindAction("ChangePlant");
-        for (int i = 0; i < plantsList.Count; i++)
-        {
-            inventorySlots.Add(0);
-        }
-        inventorySlots[0] = 3;
+        _plant = GetComponent<PlayerPlant>();
     }
 
     SO_Plants OnChangePlant()
     {
-        _indexplantslist++;
-        if (_indexplantslist == plantsList.Count)
-        {
-            _indexplantslist = 0 ;
-        }
+        _selectedIndex = (_selectedIndex + 1) % _inventory.Count;
 
-        return plantsList[_indexplantslist];
+        return GetSelectedSlot().Plant;
     }
 
     public SO_Plants GetSelectedSeed()
     {
-        return plantsList[_indexplantslist];
+        return GetSelectedSlot().Plant;
     }
 
-    public int GetSeedNb()
+    public InventorySlot GetSelectedSlot()
     {
-        return inventorySlots[_indexplantslist];
+        return _inventory[_selectedIndex];
+    }
+
+    public int GetSeedAmount()
+    {
+        return GetSelectedSlot().Amount;
+    }
+
+    public void RemoveSeed()
+    {
+        if (GetSeedAmount() == 0) return;
+
+        GetSelectedSlot().Amount--;
+    }
+
+    public void AddSeed()
+    {
+        GetSelectedSlot().Amount++;
     }
 }

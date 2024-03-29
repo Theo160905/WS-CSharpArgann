@@ -6,23 +6,39 @@ public class PlayerMain : MonoBehaviour
     /// <summary>
     /// Liens envers chaque script du joueur
     /// </summary>
-    protected PlayerPlant _playeplant;
-    protected PlayerMovement _movement;
-    protected PlayerMoney _money;
-    protected Inventory _inventoryscript;
-    protected Plot _plot;
-    protected PlayerUI _playerUI;
+    public PlayerPlant Playerplant;
 
-    protected PlayerInput _input;
-    protected InputAction _inputaction;
+    public PlayerMovement Movement;
+
+    public Inventory InventoryScript;
+
+    public Plot Plot;
+
+    public UIPlant UIplant;
+
+    public UIMoney UImoney;
+
+    public PlayerInput Input;
+
+    public InputAction InputAction;
+
+    public PlayerMoney Money { get; private set; }
 
     private void Awake()
     {
-        _input = GetComponent<PlayerInput>();
-        _money = GetComponent<PlayerMoney>();
-        _movement = GetComponent<PlayerMovement>();
-        _money = GetComponent<PlayerMoney>();
-        _inventoryscript = GetComponent<Inventory>();
-        _playerUI = GetComponent<PlayerUI>();
+        Input = GetComponent<PlayerInput>();
+        Money = GetComponent<PlayerMoney>();
+        Money.Initialize(this);
+        Movement = GetComponent<PlayerMovement>();
+        Movement.Initialize(this);
+        InventoryScript = GetComponent<Inventory>();
+        InventoryScript.Initialize(this);
+        UIplant = GetComponent<UIPlant>();
+        UIplant.Initialize(this);
+        UImoney = GetComponent<UIMoney>();
+        UImoney.Initialize(this);
+        Playerplant = GetComponent<PlayerPlant>();
+        Playerplant.Initialize(this);
+        Plot = GetComponent<Plot>();
     }
 }

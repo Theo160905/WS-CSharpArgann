@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : PlayerMain
+public class Inventory : MonoBehaviour
 {
+    public event Action OnPlantChanged;
+
+    private PlayerMain _main;
+
+    public void Initialize(PlayerMain main)
+    {
+        _main = main;
+    }
+
     [Serializable]
     public class InventorySlot
     {
@@ -15,56 +24,59 @@ public class Inventory : PlayerMain
     }
 
     [SerializeField]
-    private List<InventorySlot> _inventory = new();
+    private List<InventorySlot> _inventory = new ();
 
     private int _selectedIndex;
 
-    private void Start()
-    {
-        //Récuper l'action quand la touche "c" est préssé
-        _inputaction = _input.actions.FindAction("ChangePlant");
-        _playerUI.ShowPlant();
-    }
-
-    //Méthode pour pouvoir changer de Plantes 
-    SO_Plants OnChangePlant()
-    {
-        _selectedIndex = (_selectedIndex + 1) % _inventory.Count;
-        _playerUI.ShowPlant();
-        return GetSelectedSlot().Plant;
-    }
-
-    //Méthode pour récupérer la Plante, qui est actuellement choisi, dans d'autres scripts 
+    // Méthode pour récupérer la Plante, qui est actuellement choisi, dans d'autres scripts
     public SO_Plants GetSelectedSeed()
     {
         return GetSelectedSlot().Plant;
     }
 
-    //Méthode pour connaître l'index d'où se situe le joueur dans la liste
+    // Méthode pour connaître l'index d'où se situe le joueur dans la liste
     public InventorySlot GetSelectedSlot()
     {
         return _inventory[_selectedIndex];
     }
 
-    //Méthode pour connaître le nombre de graines de la plantes choisi
+    // Méthode pour connaître le nombre de graines de la plantes choisi
     public int GetSeedAmount()
     {
         return GetSelectedSlot().Amount;
     }
 
-    //Méthode pour enlever le nombre de graines de la plantes choisi
+    // Méthode pour enlever le nombre de graines de la plantes choisi
     public void RemoveSeed()
     {
-        if (GetSeedAmount() == 0) return;
+        if (GetSeedAmount() == 0)
+        {
+            return;
+        }
 
         GetSelectedSlot().Amount--;
-        _playerUI.ShowPlant();
+        _main.UIplant.ShowPlant();
     }
 
-    //Méthode pour ajouter le nombre de graines de la plantes choisi
+    // Méthode pour ajouter le nombre de graines de la plantes choisi
     public void AddSeed()
     {
         GetSelectedSlot().Amount++;
-        _playerUI.ShowPlant();
+        _main.UIplant.ShowPlant();
+    }
+
+    private void Start()
+    {
+        // Récuper l'action quand la touche "c" est préssé
+        _main.InputAction = _main.Input.actions.FindAction("ChangePlant");
+        _main.UIplant.ShowPlant();
+    }
+
+    // Méthode pour pouvoir changer de Plantes
+    private SO_Plants OnChangePlant()
+    {
+        _selectedIndex = (_selectedIndex + 1) % _inventory.Count;
+        OnPlantChanged?.Invoke();
+        return GetSelectedSlot().Plant;
     }
 }

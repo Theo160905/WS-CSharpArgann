@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bbd1648b8e7c94696b98b8b5cdb7bf, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  Name: Carrot
-  ID: 1
-  BuyValue: 3
-  SaleValue: 5
-  GrowthTime: 5000
-  Nb_Plants: 0
   Prefab: {fileID: 3366273486989838695, guid: c17d9c65a58553746a8b0367ffeaf708, type: 3}
+  <Name>k__BackingField: Carrot
+  <BuyValue>k__BackingField: 3
+  <SaleValue>k__BackingField: 5
+  <GrowthTime>k__BackingField: 5

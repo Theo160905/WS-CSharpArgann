@@ -1,25 +1,35 @@
-﻿public class PlayerMoney : PlayerMain
-{
-    public int MoneyPlayer;
+﻿using System;
+using UnityEngine;
 
-    //Méthode pour connaitre la valeur MoneyPlayer dans d'autres scripts
-    public int GetMoneyPlayer()
+public class PlayerMoney : MonoBehaviour
+{
+    public event Action OnMoneyChanged;
+
+    public int MoneyPlayer { get; private set; }
+
+    private PlayerMain _main;
+
+    public void Initialize(PlayerMain main)
     {
-        return MoneyPlayer;
+        _main = main;
     }
 
-    //Méthode pour retirer une valeur (money) au joueur
+    // Méthode pour retirer une valeur (money) au joueur
     public void RemoveMoney(int money)
     {
-        if (GetMoneyPlayer() == 0) return;
+        if (MoneyPlayer == 0)
+        {
+            return;
+        }
+
         MoneyPlayer -= money;
-        _playerUI.ShowMoney();
+        OnMoneyChanged?.Invoke();
     }
 
-    //Méthode pour ajouter une valeur (money) au joueur
+    // Méthode pour ajouter une valeur (money) au joueur
     public void AddMoney(int money)
     {
         MoneyPlayer += money;
-        _playerUI.ShowMoney();
+        _main.UImoney.ShowMoney();
     }
 }

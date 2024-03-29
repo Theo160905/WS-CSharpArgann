@@ -2,27 +2,35 @@
 
 public class Plot : MonoBehaviour
 {
+    private PlayerMain _playermain;
+
     public Plant Plant { get; private set; }
 
-    //Méthode pour que le joueur puisse poser une plante
+    // Méthode pour que le joueur puisse poser une plante
     public void PlantSeed(SO_Plants seedData)
     {
-        if (Plant != null) return;
+        if (Plant != null)
+        {
+            return;
+        }
 
         GameObject obj = Instantiate(seedData.Prefab, transform.position, Quaternion.identity);
         Plant = obj.GetComponent<Plant>();
         Plant.Initialize(seedData);
-        Plant.Growth();
+        StartCoroutine(Plant.Growth());
     }
 
-    //Méthode pour pouvoir récupérer la plant posser sur le "plot"
+    // Méthode pour pouvoir récupérer la plant posser sur le "plot"
     public int GatherPlant()
     {
-        if (Plant == null || !Plant.IsGrown) return 0;
+        if (Plant == null || !Plant.IsGrown)
+        {
+            return 0;
+        }
 
         SO_Plants data = Plant.Data;
         Destroy(Plant.gameObject);
-        Destroy(Plant._plantready);
+        Destroy(Plant.PlantReady);
         Plant = null;
         return data.SaleValue;
     }

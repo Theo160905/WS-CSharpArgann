@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b512ae60383e5489858a38bf66f21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isready: {fileID: 725972885418826688, guid: ffcdb3bab297b8247a6f238052c916da, type: 3}
+  <IsReady>k__BackingField: {fileID: 725972885418826688, guid: ffcdb3bab297b8247a6f238052c916da, type: 3}
 --- !u!65 &-2306633086234545192
 BoxCollider:
   m_ObjectHideFlags: 0

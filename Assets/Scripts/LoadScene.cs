@@ -3,14 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    //Script utilisé que pour les boutons pour pouvoir accéder une scene à l'autre
-
+    // Script utilisé que pour les boutons pour pouvoir accéder une scene à l'autre
     public void LoadMenuScene()
     {
         SceneManager.LoadScene("Menu");
     }
 
-    public void loadGameScene()
+    public void LoadGameScene()
     {
         SceneManager.LoadScene("Game");
     }
@@ -19,7 +18,7 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene("ControllerScene");
     }
-   
+
     public void Quit()
     {
         Application.Quit();

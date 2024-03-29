@@ -3,20 +3,13 @@
 public class Dealer : MonoBehaviour
 {
     [SerializeField]
-    Inventory _inventory;
-    [SerializeField]
-    PlayerMoney _money;
+    private Inventory _inventory;
 
     [SerializeField]
-    ShopMenu _shopmenu;
+    private PlayerMoney _money;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            _shopmenu.EnterShopPanel();
-        }
-    }
+    [SerializeField]
+    private ShopMenu _shopmenu;
 
     public void BuySeed()
     {
@@ -26,6 +19,14 @@ public class Dealer : MonoBehaviour
             // Si c'est le cas, tu enlève de l'argent au joueur, et tu lui ajoutes une graine.
             _money.RemoveMoney(_inventory.GetSelectedSeed().BuyValue);
             _inventory.AddSeed();
-        } 
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            _shopmenu.EnterShopPanel();
+        }
     }
 }

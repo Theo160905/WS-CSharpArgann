@@ -25,11 +25,13 @@ public class PlayerPlant : PlayerMain
         }
     }
 
+    //Méthode qui permet au joueur de mettre une plantes sur un "plot" (zone où le joueur pose les plantes)
     void OnPlant()
     {
         if (_plot != null && _plot.Plant == null && _inventoryscript.GetSeedAmount() > 0)
         {
             _inventoryscript.RemoveSeed();
+            _playerUI.ShowPlant();
             _plot.PlantSeed(_inventoryscript.GetSelectedSeed());
         }
 

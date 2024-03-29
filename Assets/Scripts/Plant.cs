@@ -7,17 +7,23 @@ public class Plant : MonoBehaviour
 
     public SO_Plants Data { get; private set; }
 
+    [SerializeField]
+    private GameObject _isready;
+
     public void Initialize(SO_Plants data)
     {
         IsGrown = false;
         Data = data;
     }
 
+    //Méthode pour que la plante puisse être récupéré lorsque la méthode est appelé
     public async void Growth()
     {
+        //Async pour attrendre le temps de chaque temps de pousse de chauque plantes
         await Task.Delay(Data.GrowthTime);
-        Debug.Log("FINI");
+        GameObject newTruc = Instantiate(_isready);
+        newTruc.transform.position = new Vector3 (transform.position.x, transform.position.y + 1, transform.position.z);
+        newTruc.transform.parent = gameObject.transform;
         IsGrown = true;
-        //Grandir la plante
     }
 }

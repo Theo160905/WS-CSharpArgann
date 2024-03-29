@@ -8,13 +8,13 @@ public class Dealer : MonoBehaviour
     PlayerMoney _money;
 
     [SerializeField]
-    private GameObject _canvas;
+    ShopMenu _shopmenu;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            _canvas.SetActive(true);
+            _shopmenu.EnterShopPanel();
         }
     }
 

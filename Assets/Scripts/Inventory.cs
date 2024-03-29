@@ -23,13 +23,14 @@ public class Inventory : PlayerMain
     {
         //Récuper l'action quand la touche "c" est préssé
         _inputaction = _input.actions.FindAction("ChangePlant");
+        _playerUI.ShowPlant();
     }
 
     //Méthode pour pouvoir changer de Plantes 
     SO_Plants OnChangePlant()
     {
         _selectedIndex = (_selectedIndex + 1) % _inventory.Count;
-
+        _playerUI.ShowPlant();
         return GetSelectedSlot().Plant;
     }
 
@@ -51,15 +52,19 @@ public class Inventory : PlayerMain
         return GetSelectedSlot().Amount;
     }
 
+    //Méthode pour enlever le nombre de graines de la plantes choisi
     public void RemoveSeed()
     {
         if (GetSeedAmount() == 0) return;
 
         GetSelectedSlot().Amount--;
+        _playerUI.ShowPlant();
     }
 
+    //Méthode pour ajouter le nombre de graines de la plantes choisi
     public void AddSeed()
     {
         GetSelectedSlot().Amount++;
+        _playerUI.ShowPlant();
     }
 }

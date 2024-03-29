@@ -13,11 +13,13 @@
     {
         if (GetMoneyPlayer() == 0) return;
         MoneyPlayer -= money;
+        _playerUI.ShowMoney();
     }
 
     //Méthode pour ajouter une valeur (money) au joueur
     public void AddMoney(int money)
     {
         MoneyPlayer += money;
+        _playerUI.ShowMoney();
     }
 }
